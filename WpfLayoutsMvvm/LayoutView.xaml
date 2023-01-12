@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:wpfLayoutMvvm="clr-namespace:WpfLayoutsMvvm">
+
+
+    <DataTemplate x:Key="EllipseTemplate" DataType="{x:Type wpfLayoutMvvm:LayoutsViewModel}">
+        <wpfLayoutMvvm:ResponsiveGrid Layouts="{Binding Layouts}" LayoutName="{Binding LayoutName}">
+            <Ellipse x:Name="TestsRegion" Fill="MediumPurple"/>
+        </wpfLayoutMvvm:ResponsiveGrid> 
+    </DataTemplate>
+   
+    <DataTemplate x:Key="RectangleTemplate" DataType="{x:Type wpfLayoutMvvm:LayoutsViewModel}">
+        <wpfLayoutMvvm:ResponsiveGrid Grid.Row="1" Layouts="{Binding Layouts}" LayoutName="{Binding LayoutName}">
+            <Rectangle x:Name="ReportsRegion" Fill="LightSalmon"/>
+        </wpfLayoutMvvm:ResponsiveGrid>
+    </DataTemplate>
+
+
+</ResourceDictionary>
